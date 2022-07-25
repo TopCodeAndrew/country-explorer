@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { useSelector } from "react-redux";
+import Header from "./Components/Header";
+import { selectDisplay } from "./redux/slices/displayCountrySlice";
+import { selectPotentials } from "./redux/slices/potentialCountriesSlice";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    let currentDisplay = useSelector(selectDisplay);
+    let currentPotentials = useSelector(selectPotentials);
+    return (
+        <div className="App">
+            <Header />
+            {currentDisplay}
+            {currentPotentials}
+        </div>
+    );
 }
 
 export default App;
