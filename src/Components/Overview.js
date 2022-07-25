@@ -1,7 +1,15 @@
 import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { selectDisplay } from "../redux/slices/displayCountrySlice";
 
 const Overview = () => {
-    return <div>Overview</div>;
+    let currentDisplay = useSelector(selectDisplay);
+    return (
+        <div>
+            <h1>{currentDisplay.name.official}</h1>
+            <h2>"{currentDisplay.name.common}"</h2>
+        </div>
+    );
 };
 
 export default Overview;

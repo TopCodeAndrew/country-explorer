@@ -24,7 +24,7 @@ const Header = () => {
     let currentDisplay = useSelector(selectDisplay);
     return (
         <div>
-            {JSON.stringify(currentDisplay.name.common)}
+            <p>{currentDisplay && currentDisplay.name.common}</p>
             <input
                 onChange={(e) => {
                     setInput(e.target.value);
@@ -50,6 +50,10 @@ const Header = () => {
             >
                 search
             </button>
+            <br />
+            <br />
+            <br />
+            <br />
         </div>
     );
 };
