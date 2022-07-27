@@ -13,7 +13,9 @@ const MainDisplay = () => {
         <div className="main-display">
             <div className="tab-select">
                 <button onClick={() => setView("Overview")}>Overview</button>
-                <button onClick={() => setView("Weather")}>Weather</button>
+                <button onClick={() => setView("Weather")}>
+                    Current Weather at Capitol
+                </button>
                 <button onClick={() => setView("Symbols")}>Symbols</button>
             </div>
             {view === "Overview" && <Overview />}

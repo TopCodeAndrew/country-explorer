@@ -89,3 +89,61 @@ td {
     font-size: 20px;
     margin: 15px 0;
 }
+.options-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.country-option {
+    cursor: pointer;
+    margin: 3px 0;
+}
+.country-option:hover {
+    color: var(--plum-web);
+}
+.symbols {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 25px;
+}
+.symbol-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+img {
+    max-width: 30vw;
+}
+.loading-modal {
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.loading-background {
+    position: absolute;
+    opacity: 0.85;
+    height: 100%;
+    width: 100%;
+    background-color: black;
+}
+.loader {
+    border: 1vw solid #f3f3f3; /* Light grey */
+    border-top: 1vw solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 3vw;
+    height: 3vw;
+    animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}

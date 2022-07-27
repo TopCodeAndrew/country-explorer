@@ -77,7 +77,55 @@ const Weather = () => {
         };
     }, []);
 
-    return <div>{JSON.stringify(weather)}</div>;
+    return (
+        <div>
+            <table className="overview-table">
+                <tr>
+                    <td>Conditions: </td>
+                    <td>{weather?.current?.condition?.text}</td>
+                </tr>
+                <tr>
+                    <td>Temperature: </td>
+                    <td>{weather?.current.temp_f} degrees Farenheit</td>
+                </tr>
+                <tr>
+                    <td>Feels Like: </td>
+                    <td>{weather?.current?.feelslike_f} degrees Farenheit</td>
+                </tr>
+                <tr>
+                    <td>Humidity: </td>
+                    <td>{weather?.current?.humidity}%</td>
+                </tr>
+                <tr>
+                    <td>Wind Speed: </td>
+                    <td>
+                        {weather?.current?.wind_mph} mph{" "}
+                        {weather?.current?.wind_dir}
+                    </td>
+                </tr>
+                {/* <tr>
+                    <td>Borders: </td>
+                    <td>
+                        {currentDisplay.borders.map((e, i, arr) => {
+                            if (i + 1 === arr.length) {
+                                return `${e}`;
+                            } else {
+                                return `${e}, `;
+                            }
+                        })}
+                    </td>
+                </tr>
+                <tr>
+                    <td>Capitol: </td>
+                    {currentDisplay.capital.map((e) => (
+                        <td>{e}</td>
+                    ))}
+                </tr> */}
+            </table>
+            {/* 
+            {JSON.stringify(weather)} */}
+        </div>
+    );
 };
 
 export default Weather;

@@ -13,22 +13,20 @@ const OptionDisplay = () => {
     const dispatch = useDispatch();
 
     return (
-        <div>
+        <div className="options-display">
             {currentPotentials &&
                 currentPotentials.map((e, i) => {
                     return (
-                        <div>
-                            <h2
-                                onClick={() =>
-                                    dispatch(
-                                        setDisplayCountry(currentPotentials[i])
-                                    )
-                                }
-                            >
-                                {e.name.common}
-                            </h2>
-                            <br />
-                        </div>
+                        <h2
+                            className="country-option"
+                            onClick={() =>
+                                dispatch(
+                                    setDisplayCountry(currentPotentials[i])
+                                )
+                            }
+                        >
+                            {e.name.common}
+                        </h2>
                     );
                 })}
         </div>

@@ -13,13 +13,15 @@ const Overview = () => {
                 <tr>
                     <td>Borders: </td>
                     <td>
-                        {currentDisplay.borders.map((e, i, arr) => {
-                            if (i + 1 === arr.length) {
-                                return `${e}`;
-                            } else {
-                                return `${e}, `;
-                            }
-                        })}
+                        {currentDisplay.borders
+                            ? currentDisplay.borders.map((e, i, arr) => {
+                                  if (i + 1 === arr.length) {
+                                      return `${e}`;
+                                  } else {
+                                      return `${e}, `;
+                                  }
+                              })
+                            : "N/A"}
                     </td>
                 </tr>
                 <tr>

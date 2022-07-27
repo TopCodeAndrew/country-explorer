@@ -5,14 +5,22 @@ import { selectDisplay } from "../redux/slices/displayCountrySlice";
 const Symbols = () => {
     let currentDisplay = useSelector(selectDisplay);
     return (
-        <div>
-            <div>
-                Flag of {currentDisplay.name.common}:
-                <img src={currentDisplay.flags.png} />
+        <div className="symbols">
+            <div className="symbol-box">
+                <h2>Flag of {currentDisplay.name.common}:</h2>
+                {currentDisplay.flags ? (
+                    <img src={currentDisplay.flags.png} />
+                ) : (
+                    "(No Data Found)"
+                )}
             </div>
-            <div>
-                Coat of Arms of {currentDisplay.name.common}:
-                <img src={currentDisplay.coatOfArms.png} />
+            <div className="symbol-box">
+                <h2>Coat of Arms of {currentDisplay.name.common}:</h2>
+                {currentDisplay.coatOfArms ? (
+                    <img src={currentDisplay.coatOfArms.png} />
+                ) : (
+                    "(No Data Found)"
+                )}
             </div>
             {/* <h1>{currentDisplay.name.official}</h1>
             <h2>"{currentDisplay.name.common}"</h2> */}
