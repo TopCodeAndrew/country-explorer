@@ -10,8 +10,8 @@ const MainDisplay = () => {
     let currentDisplay = useSelector(selectDisplay);
     console.log("CURRENT DISPLAY HERE", currentDisplay);
     return (
-        <>
-            <div>
+        <div className="main-display">
+            <div className="tab-select">
                 <button onClick={() => setView("Overview")}>Overview</button>
                 <button onClick={() => setView("Weather")}>Weather</button>
                 <button onClick={() => setView("Symbols")}>Symbols</button>
@@ -19,7 +19,7 @@ const MainDisplay = () => {
             {view === "Overview" && <Overview />}
             {view === "Weather" && <Weather />}
             {view === "Symbols" && <Symbols />}
-        </>
+        </div>
     );
 };
 

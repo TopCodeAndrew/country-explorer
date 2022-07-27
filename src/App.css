@@ -1,38 +1,91 @@
+/* CSS HEX */
+:root {
+    --granite-gray: #656369ff;
+    --cerulean-crayola: #39a5cfff;
+    --aquamarine: #90ffcbff;
+    --plum-web: #f6b0e9ff;
+    --magnolia: #f7f0f5ff;
+    padding: 0;
+    margin: 0;
+}
+
 .App {
-  text-align: center;
+    background-color: var(--granite-gray);
+    min-height: 100vh;
+    text-align: center;
+    color: var(--magnolia);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.header {
+    background-color: var(--cerulean-crayola);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10vw;
+    min-height: 40px;
+    color: var(--aquamarine);
+    margin-bottom: 20px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.country-input {
+    color: var(--aquamarine);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.home {
+    display: flex;
+    align-items: center;
+}
+h1 {
+    margin: 0;
+    font-size: 45px;
+}
+h2 {
+    margin: 0;
+    font-size: 30px;
 }
 
-.App-link {
-  color: #61dafb;
+h3 {
+    margin: 0;
+    font-size: 30px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+button {
+    background-color: var(--aquamarine);
+    min-height: 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+input {
+    border: none;
+    min-height: 25px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+.main-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tab-select {
+    width: 50vw;
+    min-width: 300px;
+    max-width: 500px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.overview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+td {
+    text-align: left;
+}
+.overview-table {
+    font-size: 20px;
+    margin: 15px 0;
 }

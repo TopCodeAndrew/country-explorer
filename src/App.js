@@ -14,7 +14,7 @@ function App() {
     let isLoading = useSelector(selectLoading);
     const dispatch = useDispatch();
     return (
-        <div className="App">
+        <div className="App font-link">
             {isLoading && <LoadingModal />}
             <Header />
             {currentDisplay ? <MainDisplay /> : <OptionDisplay />}
