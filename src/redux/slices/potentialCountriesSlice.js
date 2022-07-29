@@ -3,7 +3,7 @@ import { createSlice } from "@reduxjs/toolkit";
 export const potentialCountriesSlice = createSlice({
     name: "potentialCountries",
     initialState: {
-        value: "potentials",
+        value: "this is the potential Country initial state",
     },
     reducers: {
         setPotentialCountries: (state, action) => {
