@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { selectDisplay } from "../redux/slices/displayCountrySlice";
 import Overview from "./Overview";
-import Weather from "./Weather";
 import Symbols from "./Symbols";
+import Weather from "./Weather";
 
 const MainDisplay = () => {
     const [view, setView] = useState("Overview");
     let currentDisplay = useSelector(selectDisplay);
     console.log("CURRENT DISPLAY HERE", currentDisplay);
     return (
-        <div className="main-display">
+        <div className="stack">
             <div className="tab-select">
                 <button onClick={() => setView("Overview")}>Overview</button>
                 <button onClick={() => setView("Weather")}>

@@ -1,16 +1,14 @@
+import { useDispatch, useSelector } from "react-redux";
 import "./App.css";
-import { useSelector, useDispatch } from "react-redux";
 import Header from "./Components/Header";
-import { selectDisplay } from "./redux/slices/displayCountrySlice";
-import { selectPotentials } from "./redux/slices/potentialCountriesSlice";
-import { selectLoading, toggleLoading } from "./redux/slices/loadingSlice";
 import LoadingModal from "./Components/LoadingModal";
 import MainDisplay from "./Components/MainDisplay";
 import OptionDisplay from "./Components/OptionDisplay";
+import { selectDisplay } from "./redux/slices/displayCountrySlice";
+import { selectLoading, toggleLoading } from "./redux/slices/loadingSlice";
 
 function App() {
     let currentDisplay = useSelector(selectDisplay);
-
     let isLoading = useSelector(selectLoading);
     const dispatch = useDispatch();
     return (

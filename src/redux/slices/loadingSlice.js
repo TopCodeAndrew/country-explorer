@@ -7,9 +7,11 @@ export const displayCountry = createSlice({
     },
     reducers: {
         setLoadingTrue: (state) => {
+            console.log("setLoadingTrue");
             state.value = true;
         },
         setLoadingFalse: (state) => {
+            console.log("setLoadingFalse");
             state.value = false;
         },
         toggleLoading: (state) => {

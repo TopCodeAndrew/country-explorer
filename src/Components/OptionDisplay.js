@@ -1,10 +1,6 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
-import {
-    selectDisplay,
-    setDisplayCountry,
-    deleteDisplayCountry,
-} from "../redux/slices/displayCountrySlice";
+import { useDispatch, useSelector } from "react-redux";
+import { setDisplayCountry } from "../redux/slices/displayCountrySlice";
 
 import { selectPotentials } from "../redux/slices/potentialCountriesSlice";
 
@@ -13,7 +9,7 @@ const OptionDisplay = () => {
     const dispatch = useDispatch();
 
     return (
-        <div className="options-display">
+        <div className="stack">
             {currentPotentials &&
                 currentPotentials.map((e, i) => {
                     return (

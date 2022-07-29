@@ -1,21 +1,15 @@
-import React, { useState } from "react";
 import axios from "axios";
-import { useSelector, useDispatch } from "react-redux";
+import React, { useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import {
-    selectDisplay,
-    setDisplayCountry,
     deleteDisplayCountry,
+    selectDisplay,
 } from "../redux/slices/displayCountrySlice";
+import { setLoadingFalse, setLoadingTrue } from "../redux/slices/loadingSlice";
 import {
-    selectPotentials,
-    setPotentialCountries,
     deletePotentialCountries,
+    setPotentialCountries,
 } from "../redux/slices/potentialCountriesSlice";
-import {
-    setLoadingFalse,
-    setLoadingTrue,
-    toggleLoading,
-} from "../redux/slices/loadingSlice";
 
 import { BsFillFlagFill } from "react-icons/bs";
 const Header = () => {
@@ -42,7 +36,7 @@ const Header = () => {
                 />
                 <button
                     onClick={() => {
-                        dispatch(setLoadingTrue);
+                        dispatch(setLoadingTrue());
                         dispatch(deleteDisplayCountry());
                         dispatch(deletePotentialCountries());
                         axios

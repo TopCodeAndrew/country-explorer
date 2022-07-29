@@ -1,11 +1,11 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 import { selectDisplay } from "../redux/slices/displayCountrySlice";
 
 const Overview = () => {
     let currentDisplay = useSelector(selectDisplay);
     return (
-        <div className="overview">
+        <div className="stack">
             <h1>{currentDisplay.name.official}</h1>
             <h2>"{currentDisplay.name.common}"</h2>
 
