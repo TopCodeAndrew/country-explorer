@@ -12,8 +12,10 @@ const OptionDisplay = () => {
         <div className="stack">
             {currentPotentials &&
                 currentPotentials.map((e, i) => {
+                    console.log(e);
                     return (
                         <h2
+                            key={e.name.official}
                             className="country-option"
                             onClick={() =>
                                 dispatch(

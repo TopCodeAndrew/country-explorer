@@ -13,10 +13,10 @@ import {
 
 import { BsFillFlagFill } from "react-icons/bs";
 const Header = () => {
-    const [input, setInput] = useState("america");
     const dispatch = useDispatch();
 
     let currentDisplay = useSelector(selectDisplay);
+    const [input, setInput] = useState(currentDisplay);
     return (
         <div className="header">
             <div className="home">
@@ -37,11 +37,11 @@ const Header = () => {
                 <button
                     onClick={() => {
                         dispatch(setLoadingTrue());
-                        dispatch(deleteDisplayCountry());
-                        dispatch(deletePotentialCountries());
                         axios
                             .get(`https://restcountries.com/v3.1/name/${input}`)
                             .then((res) => {
+                                dispatch(deleteDisplayCountry());
+                                dispatch(deletePotentialCountries());
                                 console.log(res.data.length);
                                 console.log(res.data[0].name.common);
                                 dispatch(
@@ -49,6 +49,12 @@ const Header = () => {
                                     setPotentialCountries(res.data)
                                 );
                                 dispatch(setLoadingFalse());
+                            })
+                            .catch((err) => {
+                                dispatch(setLoadingFalse());
+                                alert(
+                                    "No countries found that match your search!"
+                                );
                             });
                     }}
                 >

@@ -68,27 +68,7 @@ const Weather = () => {
                         {weather?.current?.wind_dir}
                     </td>
                 </tr>
-                {/* <tr>
-                    <td>Borders: </td>
-                    <td>
-                        {currentDisplay.borders.map((e, i, arr) => {
-                            if (i + 1 === arr.length) {
-                                return `${e}`;
-                            } else {
-                                return `${e}, `;
-                            }
-                        })}
-                    </td>
-                </tr>
-                <tr>
-                    <td>Capitol: </td>
-                    {currentDisplay.capital.map((e) => (
-                        <td>{e}</td>
-                    ))}
-                </tr> */}
             </table>
-            {/* 
-            {JSON.stringify(weather)} */}
         </div>
     );
 };

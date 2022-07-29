@@ -22,8 +22,6 @@ const Symbols = () => {
                     "(No Data Found)"
                 )}
             </div>
-            {/* <h1>{currentDisplay.name.official}</h1>
-            <h2>"{currentDisplay.name.common}"</h2> */}
         </div>
     );
 };

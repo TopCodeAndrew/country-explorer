@@ -165,8 +165,8 @@ td {
     background-color: black;
 }
 .loader {
-    border: 1vw solid var(--magnolia); /* Light grey */
-    border-top: 1vw solid #3498db; /* Blue */
+    border: 1vw solid var(--magnolia);
+    border-top: 1vw solid var(--cerulean-crayola); /* Blue */
     border-radius: 50%;
     width: 3vw;
     height: 3vw;
