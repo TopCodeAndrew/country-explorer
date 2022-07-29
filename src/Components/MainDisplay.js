@@ -1,13 +1,10 @@
 import React, { useState } from "react";
-import { useSelector } from "react-redux";
-import { selectDisplay } from "../redux/slices/displayCountrySlice";
 import Overview from "./Overview";
 import Symbols from "./Symbols";
 import Weather from "./Weather";
 
 const MainDisplay = () => {
     const [view, setView] = useState("Overview");
-    let currentDisplay = useSelector(selectDisplay);
     return (
         <div className="stack">
             <div className="tab-select">
