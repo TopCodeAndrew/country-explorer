@@ -16,7 +16,7 @@ const Header = () => {
     const dispatch = useDispatch();
 
     let currentDisplay = useSelector(selectDisplay);
-    const [input, setInput] = useState(currentDisplay);
+    const [input, setInput] = useState();
     return (
         <div className="header">
             <div className="home">
