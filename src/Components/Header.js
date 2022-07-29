@@ -1,12 +1,7 @@
 import axios from "axios";
 import React, { useState } from "react";
-import { setLoadingFalse, setLoadingTrue } from "../redux/slices/loadingSlice";
-import {
-    deletePotentialCountries,
-    setPotentialCountries,
-} from "../redux/slices/potentialCountriesSlice";
-
 import { BsFillFlagFill } from "react-icons/bs";
+
 const Header = () => {
     const [input, setInput] = useState();
     return (
