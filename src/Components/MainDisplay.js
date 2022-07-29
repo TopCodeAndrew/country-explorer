@@ -8,7 +8,6 @@ import Weather from "./Weather";
 const MainDisplay = () => {
     const [view, setView] = useState("Overview");
     let currentDisplay = useSelector(selectDisplay);
-    console.log("CURRENT DISPLAY HERE", currentDisplay);
     return (
         <div className="stack">
             <div className="tab-select">

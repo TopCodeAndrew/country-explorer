@@ -29,7 +29,6 @@ const Weather = () => {
             .request(options)
             .then(function (res) {
                 setWeather(res.data);
-                console.log(res.data);
                 dispatch(setLoadingFalse());
             })
             .catch(function (error) {
@@ -37,9 +36,6 @@ const Weather = () => {
                 dispatch(setLoadingFalse());
                 alert("Issue fetching weather data");
             });
-        return () => {
-            console.log("weather component killed");
-        };
     }, []);
 
     return (

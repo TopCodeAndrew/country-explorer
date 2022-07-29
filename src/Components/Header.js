@@ -42,8 +42,6 @@ const Header = () => {
                             .then((res) => {
                                 dispatch(deleteDisplayCountry());
                                 dispatch(deletePotentialCountries());
-                                console.log(res.data.length);
-                                console.log(res.data[0].name.common);
                                 dispatch(
                                     // this is an object
                                     setPotentialCountries(res.data)
