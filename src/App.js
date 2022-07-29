@@ -12,6 +12,7 @@ function App() {
     let isLoading = useSelector(selectLoading);
     return (
         <div className="App font-link">
+            Starter Code
             {isLoading && <LoadingModal />}
             <Header />
             {currentDisplay ? <MainDisplay /> : <OptionDisplay />}
