@@ -10,22 +10,19 @@ const OptionDisplay = () => {
 
     return (
         <div className="stack">
-            {currentPotentials &&
-                currentPotentials.map((e, i) => {
-                    return (
-                        <h2
-                            key={e.name.official}
-                            className="country-option"
-                            onClick={() =>
-                                dispatch(
-                                    setDisplayCountry(currentPotentials[i])
-                                )
-                            }
-                        >
-                            {e.name.common}
-                        </h2>
-                    );
-                })}
+            {currentPotentials.map((e, i) => {
+                return (
+                    <h2
+                        key={e.name.official}
+                        className="country-option"
+                        onClick={() =>
+                            dispatch(setDisplayCountry(currentPotentials[i]))
+                        }
+                    >
+                        {e.name.common}
+                    </h2>
+                );
+            })}
         </div>
     );
 };
